@@ -1,0 +1,35 @@
+import org.openqa.selenium.By;
+import org.openqa.selenium.Keys;
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.firefox.FirefoxDriver;
+import org.openqa.selenium.interactions.Action;
+import org.openqa.selenium.interactions.Actions;
+
+public class Sample {
+
+	public static void main(String[] args) throws InterruptedException {
+		// TODO Auto-generated method stub
+	System.setProperty("webdriver.chrome.driver","D:\\Selenium Setup\\chromedriver_win32\\chromedriver.exe");
+WebDriver ex = new  ChromeDriver();
+		//WebDriver ex= new FirefoxDriver();
+
+ex.get("https://www.facebook.com");
+
+//Thread.sleep(5000);
+
+ex.findElement(By.xpath(".//*[@id='email']")).sendKeys("chirayuh69@gmail.com");
+ex.findElement(By.xpath(".//*[@id='pass']")).sendKeys("chirayu@123");
+ex.findElement(By.xpath(".//*[@id='loginbutton']")).click();
+ex.findElement(By.xpath(".//*[@id='userNavigationLabel']")).click();
+ex.findElement(By.xpath(".//*[@id='js_ku']/div/div/ul/li[8]/a/span/span")).click();
+
+/*Actions a = new Actions(ex);
+a.moveToElement(abc).contextClick().keyDown(Keys.DOWN).keyUp(Keys.DOWN).build().perform();
+a.perform();*/
+Thread.sleep(5000);
+ex.close();
+	}
+
+}
+
