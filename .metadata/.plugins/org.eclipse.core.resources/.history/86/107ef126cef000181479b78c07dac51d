@@ -6,7 +6,7 @@ import org.openqa.selenium.firefox.FirefoxDriver;
 import org.openqa.selenium.interactions.Action;
 import org.openqa.selenium.interactions.Actions;
 
-public class Sample {
+public class GmailLogin {
 
 	public static void main(String[] args) throws InterruptedException {
 		// TODO Auto-generated method stub
@@ -14,19 +14,24 @@ public class Sample {
 WebDriver ex = new  ChromeDriver();
 		//WebDriver ex= new FirefoxDriver();
 ex.manage().window().maximize();
-ex.get("https://www.facebook.com");
+ex.get("https://www.google.com/intl/en-GB/gmail/about/");
 
 //Thread.sleep(5000);
+ex.findElement(By.xpath("html/body/nav/div/a[2]")).click();
+ex.findElement(By.xpath(".//*[@id='identifierId']")).sendKeys("chirayuh69@gmail.com");
+ex.findElement(By.xpath(".//*[@id='identifierNext']")).click();
+Thread.sleep(3000);
+/*ex.findElement(By.xpath(".//*[@id='password']")).click();*/
+ex.findElement(By.xpath(".//*[@id='password']")).sendKeys("chirayu@9986676756");
+ex.findElement(By.xpath(".//*[@id='passwordNext']")).click();
 
-ex.findElement(By.xpath(".//*[@id='email']")).sendKeys("username");
-ex.findElement(By.xpath(".//*[@id='pass']")).sendKeys("password");
-ex.findElement(By.xpath(".//*[@id='loginbutton']")).click();
-Thread.sleep(5000);
+
+Thread.sleep(2000);
 
 /*Actions a = new Actions(ex);
 a.moveToElement(abc).contextClick().keyDown(Keys.DOWN).keyUp(Keys.DOWN).build().perform();
 a.perform();*/
-Thread.sleep(5000);
+
 ex.close();
 	}
 

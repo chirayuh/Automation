@@ -18,8 +18,8 @@ ex.get("https://www.facebook.com");
 
 //Thread.sleep(5000);
 
-ex.findElement(By.xpath(".//*[@id='email']")).sendKeys("username");
-ex.findElement(By.xpath(".//*[@id='pass']")).sendKeys("password");
+ex.findElement(By.xpath(".//*[@id='email']")).sendKeys("917259587140");
+ex.findElement(By.xpath(".//*[@id='pass']")).sendKeys("9986676756");
 ex.findElement(By.xpath(".//*[@id='loginbutton']")).click();
 Thread.sleep(5000);
 

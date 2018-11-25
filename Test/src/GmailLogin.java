@@ -18,11 +18,11 @@ ex.get("https://www.google.com/intl/en-GB/gmail/about/");
 
 //Thread.sleep(5000);
 ex.findElement(By.xpath("html/body/nav/div/a[2]")).click();
-ex.findElement(By.xpath(".//*[@id='identifierId']")).sendKeys("chirayuh69@gmail.com");
+ex.findElement(By.xpath(".//*[@id='identifierId']")).sendKeys("username");
 ex.findElement(By.xpath(".//*[@id='identifierNext']")).click();
 Thread.sleep(3000);
 /*ex.findElement(By.xpath(".//*[@id='password']")).click();*/
-ex.findElement(By.xpath(".//*[@id='password']")).sendKeys("chirayu@9986676756");
+ex.findElement(By.xpath(".//*[@id='password']")).sendKeys("password");
 ex.findElement(By.xpath(".//*[@id='passwordNext']")).click();
 
 
